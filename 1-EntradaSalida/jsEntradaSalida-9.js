@@ -13,9 +13,7 @@ function mostrarAumento()
 	resultado = sueldo * 1.10;
 
 	document.getElementById('resultado').value = resultado;
-	resultado = parseInt(resultado);
 
-	
 	console.log("El sueldo con aumento es: " + resultado);
 
 
