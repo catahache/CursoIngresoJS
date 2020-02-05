@@ -18,7 +18,7 @@ function SacarResto()
 
 	resultado = dividendo % divisor;
 
-	console.log(resultado); 
+	console.log("El resto es: " + resultado); 
 
 	
 }
