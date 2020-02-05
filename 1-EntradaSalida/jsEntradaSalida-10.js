@@ -5,18 +5,22 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarDescuento()
 {
 	var importe;
-	var porciento25;
-	var resultado;
+	var porcentaje;
+	var importeConDescuento;
 
 	importe = document.getElementById('importe').value;
 	importe = parseInt(importe);
+	porcentaje = 25;
 
-	porciento25 = ( 25 * importe) / 100;
-	resultado = importe - porciento25;
+	importeConDescuento = importe - importe*porcentaje/100;
 
-	document.getElementById('resultado').value = resultado;
+	document.getElementById('resultado').value = importeConDescuento;
 
-	console.log("El importe con descuento es: " + resultado);
+	console.log("El importe con descuento es: " + importeConDescuento);
 
+	//precioConDescuento = precio - precio * porcenteDescuento / 100;
+	//precioConAumento = precio + precio * aumento / 100;
 	
 }
+
+//EJERCICIO 11
