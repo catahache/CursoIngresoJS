@@ -1,5 +1,17 @@
 function mostrar()
 {
+	var edad;
+
+	edad = document.getElementById('edad').value;
+
+	if(edad>17) //usa el microprocesador
+	{
+		alert("mayores");
+	}
+	else //no usa el microprocesador.
+	{
+		alert("menores");
+	}
 //tomo la edad  
 
 
