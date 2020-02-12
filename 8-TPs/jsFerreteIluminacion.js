@@ -10,5 +10,77 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+	var precioLamparas;
+	var cantidadLamparas;
+	var precioConDescuento;
+	var marca;
+
+	precioLamparas = 35;
+	precioLamparas = parseInt(precioLamparas);
+	cantidadLamparas = document.getElementById('Cantidad').value;
+	cantidadLamparas = parseInt(cantidadLamparas);
+	precioConDescuento = parseInt(precioConDescuento);
+	marca = document.getElementById('Marca').value;
+
+	if (cantidadLamparas > 5)
+	{
+		precioConDescuento = (precioLamparas * cantidadLamparas) * 0.50;
+	}
+	else
+	{
+		if (marca == "ArgentinaLuz" && cantidadLamparas == 5)
+		{
+			precioConDescuento = (precioLamparas * cantidadLamparas) * 0.60;
+		}
+		else
+		{
+			if (marca == "ArgentinaLuz" && cantidadLamparas == 4)
+			{
+				precioConDescuento = (precioLamparas * cantidadLamparas) * 0.75;
+			}
+			else
+			{
+				if (marca == "ArgentinaLuz" && cantidadLamparas == 3)
+					{
+						precioConDescuento = (precioLamparas * cantidadLamparas) * 0.85;//descuento 15% 
+					}
+			}
+		}
+	} //pisteando como una campeona por ahora
+	if(marca == "FelipeLamparas" && cantidadLamparas == 4)
+	{
+		precioConDescuento = (precioLamparas * cantidadLamparas) * 0.75;//descuento 25%
+	}
+	else
+	{
+		if (marca == "FelipeLamparas" && cantidadLamparas == 3) 
+		{
+			precioConDescuento = (precioLamparas * cantidadLamparas) * 0.90;//decuento 10%
+		}
+	}
+	if (marca != "ArgentinaLuz" && cantidadLamparas == 5)
+	{
+		precioConDescuento = (precioLamparas * cantidadLamparas) * 0.70;//des 30%
+	}
+	else
+	{
+		if (marca != "ArgentinaLuz" && marca != "FelipeLamparas" && cantidadLamparas == 4)
+		{
+			precioConDescuento = (precioLamparas * cantidadLamparas) * 0.80;//des 20%
+		}
+		else
+		{
+			if (marca != "ArgentinaLuz" && marca != "FelipeLamparas" && cantidadLamparas == 3)
+			{
+				precioConDescuento = (precioLamparas * cantidadLamparas) * 0.95;//des 5%
+			}
+		}
+	}
+	if (precioConDescuento > 120)
+	{
+		precioConDescuento = (precioConDescuento * 1.10) //sumo IIBB
+		alert("Usted pagó " + precioConDescuento * 10 / 100 + " de IIBB.")
+	}
+
+	document.getElementById('precioDescuento').value = precioConDescuento;
 }
