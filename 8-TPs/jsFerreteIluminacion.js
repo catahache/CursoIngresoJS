@@ -22,7 +22,8 @@ function CalcularPrecio ()
 	cantidadLamparas = parseInt(cantidadLamparas);
 	precioConDescuento = parseInt(precioConDescuento);
 	marca = document.getElementById('Marca').value;
-	precioConIIBB = (precioConDescuento * 10) / 100 + precioConDescuento;
+	precioConIIBB = (precioConDescuento * 10) / 100 + precioConDescuento;//revisar
+	precioConIIBB = parseInt (precioConIIBB);
 
 	if (cantidadLamparas > 5)
 	{
@@ -78,11 +79,16 @@ function CalcularPrecio ()
 			}
 		}
 	}
+	document.getElementById('precioDescuento').value = precioConDescuento;
+
 	if (precioConDescuento > 120)
 	{
 		document.getElementById('precioDescuento').value = precioConIIBB; //sumo IIBB
-		alert("Usted pagó " + ((precioConDescuento * 10) / 100) + " de IIBB.")
+		alert("Usted pagó " + ((precioConDescuento * 10) / 100) + " de IIBB.");
 	}
-
-	document.getElementById('precioDescuento').value = precioConDescuento;
 }
+
+
+
+
+
