@@ -16,6 +16,8 @@ function CalcularPrecio ()
 	var porcentaje;
 	var marca;
 	var precioConDescuento;
+	var iibb;
+	var precioIibb;
 
 
 	precioLamparas = 35;
@@ -25,11 +27,13 @@ function CalcularPrecio ()
 	precioBruto = cantidadLamparas * precioLamparas;
 	marca = document.getElementById('Marca').value;
 
-	porcentaje = 0
+	porcentaje = 0;
+	iibb = 0;
 
+	
 	if (cantidadLamparas > 5)
 	{
-		porcentaje = 5;	
+		porcentaje = 50;	
 	}
 	else
 	{
@@ -83,10 +87,19 @@ function CalcularPrecio ()
 		}
 	}
 
+	precioConDescuento = (precioBruto - precioBruto * porcentaje / 100);
 
-	precioConDescuento = precioBruto - precioBruto * porcentaje / 100;
-	document.getElementById('precioDescuento').value = precioConDescuento;
+		if(precioConDescuento > 120)
+	{
+		iibb = 10;
+		alert ("Usted pago " + precioConDescuento * iibb / 100 + " de IIBB.");
+	}
 
+	document.getElementById('precioDescuento').value = precioConDescuento + precioConDescuento * iibb / 100;
+
+
+	/*precioIibb = precioConDescuento +(precioConDescuento * iibb / 100);
+	document.getElementById('precioDescuento').value = precioIibb;*/
 }
 
 
