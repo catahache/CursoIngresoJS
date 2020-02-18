@@ -16,7 +16,8 @@ switch (mesDelAño)
 		console.info("Este mes tiene 28 días.");
 		break;
 	default: 
-		console.info("Este mes tiene 31 días.")
+		console.info("Este mes tiene 31 días.");
+		break;
 }
 
 

@@ -2,7 +2,7 @@ function mostrar()
 {
 //tomo la edad  
 var laHora = document.getElementById('hora').value;
-laHora= parseInt(laHora);
+laHora = parseInt(laHora);
 
 switch(laHora)
 {
@@ -31,7 +31,8 @@ switch(laHora)
 		console.info("Es de noche");
 		break;
 	default:
-		console.info("la hora no existe.")
+		console.info("la hora no existe.");
+		break;
 }
 
 

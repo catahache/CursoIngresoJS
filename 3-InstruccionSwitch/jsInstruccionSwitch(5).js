@@ -16,6 +16,7 @@ switch(laHora)
 		break;
 	default:
 		console.info("No es de mañana");
+		break;
 }
 	
 	

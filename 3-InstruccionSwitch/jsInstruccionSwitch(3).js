@@ -9,7 +9,8 @@ switch(mesDelAño)
 		console.info("Este mes no tiene más de 29 días.");
 		break;
 	default:
-		console.info("Este mes tiene 30 o más días")
+		console.info("Este mes tiene 30 o más días");
+		break;
 }
 
 //alert (mesDelAño);
