@@ -10,96 +10,128 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var precioLamparas;
-	var cantidadLamparas;
-	var precioBruto;
-	var porcentaje;
+	//Switch: no tiene logica. Siempre sobre la misma variable con valores literales. 
+	//Lo que esta adentro de cada caso se ejecuta hasta que encuentr un break
+	var cantidadDeLamparas;
 	var marca;
+	var precioBruto;
+	var descuento;
 	var precioConDescuento;
-	var iibb;
-	var precioIibb;
 
-
-	precioLamparas = 35;
-	precioLamparas = parseInt(precioLamparas);
-	cantidadLamparas = document.getElementById('Cantidad').value;
-	cantidadLamparas = parseInt(cantidadLamparas);
-	precioBruto = cantidadLamparas * precioLamparas;
+	cantidadDeLamparas = document.getElementById('Cantidad').value;
+	cantidadDeLamparas = parseInt(cantidadDeLamparas);
 	marca = document.getElementById('Marca').value;
+	precioBruto = cantidadDeLamparas * 35;
+	console.info("El precio bruto es: ", precioBruto);//console.info recibe dos parametros: texto y variable.
+	descuento = 0;
 
-	porcentaje = 0;
-	iibb = 0;
-
-	
-	if (cantidadLamparas > 5)
+	switch(cantidadDeLamparas)
 	{
-		porcentaje = 50;	
+		case 5: //no poner condiciones
+
+			switch(marca)
+			{
+				case "ArgentinaLuz":
+					descuento = 40;
+					break;
+				default:
+					descuento = 30;
+			}
+			break;
+		case 4:
+			switch(marca)
+			{
+				case "ArgentinaLuz":
+				case "FelipeLamparas":
+					descuento = 25;
+					break;
+				default:
+					descuento = 20;
+			}
+			break;
+		case 3;
+			switch(marca)
+			{
+				case "ArgentinaLuz":
+					descuento = 15;
+					break;
+				case "FelipeLamparas":
+					descuento = 10;
+					break;
+				default:
+					descuento = 5;
+			}
+			break;
+		case 1://cuando dos casos hacen lo mismo, en el codigo se escribe una sola vez.
+		case 2:
+			descuento = 0;
+			break;
+		default: //resto del universo. Es el else de switch.
+			descuento = 50;
+			break;
+
+	}
+
+
+/*	if (cantidadDeLamparas > 5)
+	{
+		descuento = 50;
 	}
 	else
 	{
-		if(cantidadLamparas == 5)
+		if(cantidadDeLamparas == 5)
 		{
-			if (marca == "ArgentinaLuz") 
+			if (marca == "ArgentinaLuz")
 			{
-				porcentaje = 40;
+				descuento = 40;
 			}
 			else
 			{
-				porcentaje = 30;
+				descuento = 30;
 			}
 		}
 		else
 		{
-			if(cantidadLamparas == 4)
+			if (cantidadDeLamparas == 4)
 			{
-				if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+				if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
 				{
-					porcentaje = 25;
+					descuento = 25;
 				}
 				else
 				{
-					porcentaje = 20;
+					descuento = 20;
 				}
-
 			}
 			else
 			{
-				if(cantidadLamparas == 3)
+				if (cantidadDeLamparas == 3)
 				{
-					if (marca == "ArgentinaLuz") 
+					if (marca == "ArgentinaLuz")
 					{
-						porcentaje = 15;
+						descuento = 15;
 					}
 					else
 					{
-						if(marca == "FelipeLamparas")
+						if (marca == "FelipeLamparas")
 						{
-							porcentaje = 10;
+							descuento = 10;
 						}
 						else
 						{
-							porcentaje = 5;
+							descuento = 5;
 						}
 					}
-				}
-			}
-
-		}
-	}
-
-	precioConDescuento = (precioBruto - precioBruto * porcentaje / 100);
-
-		if(precioConDescuento > 120)
-	{
-		iibb = 10;
-		alert ("Usted pago " + precioConDescuento * iibb / 100 + " de IIBB.");
-	}
-
-	document.getElementById('precioDescuento').value = precioConDescuento + precioConDescuento * iibb / 100;
+				}//if (cantidadDeLamparas == 3)
+			}//if (cantidadDeLamparas == 4)
+		}//if (cantidadDeLamparas == 5)
+	}//if (cantidadDeLamparas > 5)*/
 
 
-	/*precioIibb = precioConDescuento +(precioConDescuento * iibb / 100);
-	document.getElementById('precioDescuento').value = precioIibb;*/
+	precioConDescuento = precioBruto - precioBruto * descuento /100;
+	console.info("El precio con descuento es: ", precioConDescuento); 
+	document.getElementById('precioDescuento').value = precioConDescuento;
+
 }
 
 
