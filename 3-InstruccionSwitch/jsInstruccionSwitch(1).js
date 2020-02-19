@@ -22,3 +22,4 @@ function mostrar()
 
 
 }//FIN DE LA FUNCIÓN
+//adentro del switch cada case busca el break (busca para abajo, sigue el lineamiento de la escritura)
