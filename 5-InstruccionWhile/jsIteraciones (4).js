@@ -11,6 +11,7 @@ function mostrar()
 	while (isNaN(numero) || numero>10 || numero<0)//Si no pedis numero te lo pide de vuelta. Si alguna de todas estas no se cumple, vuelve a entrar
 	{
 		numero = prompt("ingrese un número entre 0 y 9");
+		numero = parseInt(numero);
 	}
 	document.getElementById('Numero').value = numero;
 }//FIN DE LA FUNCIÓN
