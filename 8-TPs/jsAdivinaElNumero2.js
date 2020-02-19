@@ -24,9 +24,11 @@ function comenzar()
 function verificar()
 {
 	contadorIntentos = contadorIntentos + 1;
+	contadorIntentos = parseInt(contadorIntentos);
 	numeroIngresado = document.getElementById('numero').value;
+	document.getElementById('intentos').value = contadorIntentos;
 
-	if (numeroSecreto = numeroIngresado)
+	if (numeroSecreto == numeroIngresado)
 	{
 		switch (contadorIntentos)
 		{
@@ -57,6 +59,9 @@ function verificar()
 			break;
 		}
 	}//if (numeroSecreto = numeroIngresado)
-
-	document.getElementById('intentos').value = contadorIntentos;
+	else
+	{
+		alert("Seguí intentando");
+	}
+	
 }
