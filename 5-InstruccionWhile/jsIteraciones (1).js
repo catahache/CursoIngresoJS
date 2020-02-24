@@ -25,6 +25,7 @@ function mostrar()
 	//Tiene que modificar su propia condicion para no quedar en bucle infinito.
 	//siempre evalua, y despues hace.
 }*/
+
 /*primera instruccion que, a diferencia del if y el switch, una vez que termina repite
 -tres puntos que tenemos que tener en todo while:
 	- tengo que asegurarme de que cuando evalue la info las variables tengan valor correcto.(tengo que cargarle un valor a la variable(inicializarla) antes de empezar)

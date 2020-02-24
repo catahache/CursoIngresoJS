@@ -3,11 +3,13 @@ function mostrar()
 
 	var contador=0;
 	var positivo=0;
-	var negativo=1;
+	var negativo=0;
 	var acumulador;
 	var numeroIngresado;
+	var respuesta;
 	
-	var respuesta='si';
+	respuesta='si';
+	acumulador = 0;
 
 	while(respuesta == "si")
 	{
@@ -19,10 +21,12 @@ function mostrar()
 		if(numeroIngresado > 0)
 		{
 			acumulador = acumulador + numeroIngresado;
+			positivo = acumulador;
 		}
 		if (numeroIngresado < 0)
 		{
 			acumulador = acumulador * numeroIngresado;
+			negativo = acumulador;
 		}
 	}
 
