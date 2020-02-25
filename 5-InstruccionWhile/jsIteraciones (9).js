@@ -5,9 +5,12 @@ function mostrar()
 	var contador;
 	var maximo;
 	var minimo;
+	var numeroIngresado;
+
 
 	contador=0;
 	respuesta='si';
+
 
 	while(respuesta!='no')
 	{

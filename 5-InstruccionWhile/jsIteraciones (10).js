@@ -23,7 +23,6 @@ function mostrar()
 	var diferenciaPositivosNegativos;
 	var respuesta;
 
-	contador = 0;
 	respuesta = "si";
 	negativos = 0;
 	positivos = 0;
@@ -37,7 +36,7 @@ function mostrar()
 	promedioNegativos = 0;
 	//declarar contadores y variables 
 
-	while(respuesta!="no")
+	while(respuesta === "si")
 	{
 		numeroIngresado = prompt("Ingrese un número");
 		numeroIngresado = parseInt(numeroIngresado);
@@ -71,15 +70,15 @@ function mostrar()
 			}
 	}
 
-	console.log("Suma de positivos: " + sumaPositivos);
-	console.log("Suma de negativos: " + sumaNegativos);
-	console.log("Cantidad de positivos: " + cantPositivos);
-	console.log("Cantidad de negativos: " + cantNegativos);
-	console.log("Cantidad de ceros: " + cantCeros);
-	console.log("Cantidad de pares: " + cantPares);
-	console.log("Promedio de positivos: " + promedioPositivos);
-	console.log("Promedio de negativos: " + promedioNegativos);
-	console.log("Diferencia entre positivos y negativos: " + diferenciaPositivosNegativos);
+	document.write("Suma de positivos: " + sumaPositivos + "<br>"); //preguntar como hacer punto aparte
+	document.write("Suma de negativos: " + sumaNegativos + "<br>");
+	document.write("Cantidad de positivos: " + cantPositivos + "<br>");
+	document.write("Cantidad de negativos: " + cantNegativos + "<br>");
+	document.write("Cantidad de ceros: " + cantCeros + "<br>");
+	document.write("Cantidad de pares: " + cantPares + "<br>");
+	document.write("Promedio de positivos: " + promedioPositivos + "<br>");
+	document.write("Promedio de negativos: " + promedioNegativos + "<br>");
+	document.write("Diferencia entre positivos y negativos: " + diferenciaPositivosNegativos + "<br>");
 
 
 }//FIN DE LA FUNCIÓN

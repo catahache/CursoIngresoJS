@@ -17,7 +17,7 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	contadorIntentos = 0; //inicializo el contador en 0
-	numeroSecreto = Math.floor(Math.random() * 100)+1;
+	numeroSecreto = Math.floor(Math.random() * 100)+1; //math.floor: 0.9999 hace que sea 1
 	console.log(numeroSecreto);
 }
 

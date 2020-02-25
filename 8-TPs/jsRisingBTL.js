@@ -9,5 +9,104 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+	 var edad;
+	 var sexo;
+	 var estadoCivil;
+	 var sueldoBruto;
+	 var numeroLegajo;
+	 var nacionalidad;
+
+	 edad = 0;
+	 estadoCivil = 0;
+	 sueldoBruto = 0;
+	 legajo = 0;
+
+	 //EDAD
+	 while(isNaN(edad) || edad < 18 || edad > 90)
+	 {
+	 	edad = prompt ("Ingrese en números -edad entre 18 y 90-");
+	 }
+	 document.getElementById('Edad').value = edad;
+
+	 //SEXO
+	 while (sexo != "M" && sexo != "F")
+	 {
+	 	sexo = prompt ("Ingrese sexo: M o F")
+	 }
+	 document.getElementById('Sexo').value = sexo;
+
+	 //ESTADO CIVIL
+	 while (estadoCivil < 1 || estadoCivil > 4) //no puedo poner isNaN porque vuelve a entrar, preguntar 
+	 {
+	 	estadoCivil = prompt("Ingrese estado civil: 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos");
+
+		 if (estadoCivil == 1)
+		 {
+		 	estadoCivil = "solterx"
+		 }
+		 else
+		 {
+		 	if (estadoCivil == 2)
+		 	{
+		 		estadoCivil = "casadx"
+		 	}
+		 	else
+		 	{
+		 		if(estadoCivil == 3)
+		 		{
+		 			estadoCivil = "divorciadx"
+		 		}
+		 		else
+		 		{
+		 			if(estadoCivil == 4)
+		 			{
+		 				estadoCivil = "viudx"
+
+		 			}
+		 		}
+		 	}
+		 }
+	 }
+	 document.getElementById('EstadoCivil').value = estadoCivil;
+
+	 //SUELDO BRUTO
+	 while (isNaN(sueldoBruto) || sueldoBruto < 8000)
+	 {
+	 	sueldoBruto = prompt("Ingrese sueldo bruto no menor a 8000");
+	 }
+	 document.getElementById('Sueldo').value = sueldoBruto;
+
+	 //LEGAJO
+	 while (isNaN(legajo) || legajo < 1000 || legajo > 9999)
+	 {
+	 	legajo = prompt("Ingrese numero de legajo -4 cifras sin ceros a la izquierda-");
+	 }
+	document.getElementById('Legajo').value = legajo;
+
+	//NACIONALIDAD: preguntar por que no puedo poner el if adentro
+	while (nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
+	{
+		nacionalidad = prompt ("Ingrese nacionalidad: “A” para argentinos, “E” para extranjeros, “N” para nacionalizados" )
+	}
+
+	if (nacionalidad == "A")
+	{
+		nacionalidad = "Argentinx";
+	}
+	else
+	{
+		if (nacionalidad == "E")
+		{
+			nacionalidad = "Extranjerx";
+		}
+		else
+		{
+			if(nacionalidad == "N")
+			{
+				nacionalidad = "Nacionalizadx";
+			}
+		}
+	}
+	document.getElementById('Nacionalidad').value = nacionalidad;
+
 }
