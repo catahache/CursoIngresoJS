@@ -34,36 +34,10 @@ function ComenzarIngreso ()
 	 }
 
 	 //ESTADO CIVIL
-	 while (estadoCivil < 1 || estadoCivil > 4) //no puedo poner isNaN porque vuelve a entrar, preguntar 
+	 while (isNaN(estadoCivil) || (estadoCivil < 1 || estadoCivil > 4)) //no puedo poner isNaN porque vuelve a entrar, preguntar 
 	 {
 	 	estadoCivil = prompt("Ingrese estado civil: 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos");
-
-		 if (estadoCivil == 1)
-		 {
-		 	estadoCivil = "solterx"
-		 }
-		 else
-		 {
-		 	if (estadoCivil == 2)
-		 	{
-		 		estadoCivil = "casadx"
-		 	}
-		 	else
-		 	{
-		 		if(estadoCivil == 3)
-		 		{
-		 			estadoCivil = "divorciadx"
-		 		}
-		 		else
-		 		{
-		 			if(estadoCivil == 4)
-		 			{
-		 				estadoCivil = "viudx"
-
-		 			}
-		 		}
-		 	}
-		 }
+	 	estadoCivil = parseInt(estadoCivil);
 	 }
 
 	 //SUELDO BRUTO
@@ -83,6 +57,39 @@ function ComenzarIngreso ()
 	{
 		nacionalidad = prompt ("Ingrese nacionalidad: “A” para argentinos, “E” para extranjeros, “N” para nacionalizados" )
 	}
+
+
+
+
+
+	//LOGICA
+
+	 if (estadoCivil == 1)
+	{
+		estadoCivil = "solterx"
+	}
+	 else
+	{
+		if (estadoCivil == 2)
+		{
+			estadoCivil = "casadx"
+		}
+		else
+		{
+			 if(estadoCivil == 3)
+			 {
+			 	estadoCivil = "divorciadx"
+			 }
+			 else
+			 {
+			 	if(estadoCivil == 4)
+			 	{
+			 		estadoCivil = "viudx"
+			 	}
+			 }
+		}
+	 }
+
 
 	if (nacionalidad == "A")
 	{

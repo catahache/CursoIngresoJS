@@ -8,7 +8,9 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
+	var numeroRandom;
+
+	numeroRandom = Math.floor(Math.random()*10) + 1;
 
 
 }//FIN DE LA FUNCIÓN
