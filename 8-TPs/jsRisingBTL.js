@@ -26,14 +26,12 @@ function ComenzarIngreso ()
 	 {
 	 	edad = prompt ("Ingrese en números -edad entre 18 y 90-");
 	 }
-	 document.getElementById('Edad').value = edad;
 
 	 //SEXO
 	 while (sexo != "M" && sexo != "F")
 	 {
 	 	sexo = prompt ("Ingrese sexo: M o F")
 	 }
-	 document.getElementById('Sexo').value = sexo;
 
 	 //ESTADO CIVIL
 	 while (estadoCivil < 1 || estadoCivil > 4) //no puedo poner isNaN porque vuelve a entrar, preguntar 
@@ -67,21 +65,18 @@ function ComenzarIngreso ()
 		 	}
 		 }
 	 }
-	 document.getElementById('EstadoCivil').value = estadoCivil;
 
 	 //SUELDO BRUTO
 	 while (isNaN(sueldoBruto) || sueldoBruto < 8000)
 	 {
 	 	sueldoBruto = prompt("Ingrese sueldo bruto no menor a 8000");
 	 }
-	 document.getElementById('Sueldo').value = sueldoBruto;
 
 	 //LEGAJO
 	 while (isNaN(legajo) || legajo < 1000 || legajo > 9999)
 	 {
 	 	legajo = prompt("Ingrese numero de legajo -4 cifras sin ceros a la izquierda-");
 	 }
-	document.getElementById('Legajo').value = legajo;
 
 	//NACIONALIDAD: preguntar por que no puedo poner el if adentro
 	while (nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
@@ -107,6 +102,11 @@ function ComenzarIngreso ()
 			}
 		}
 	}
+	
+	document.getElementById('Edad').value = edad;
+	document.getElementById('Sexo').value = sexo;
+	document.getElementById('EstadoCivil').value = estadoCivil;
+	document.getElementById('Sueldo').value = sueldoBruto;
+	document.getElementById('Legajo').value = legajo;
 	document.getElementById('Nacionalidad').value = nacionalidad;
-
 }
