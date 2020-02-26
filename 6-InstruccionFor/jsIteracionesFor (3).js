@@ -8,7 +8,7 @@ function mostrar()
 
 	for(i=0; i < repeticiones; i++)
 	{
-		console.log("Hola UTN FRA");
+		document.write("Hola UTN FRA <br>");
 	}
 
 }//FIN DE LA FUNCIÓN
