@@ -36,39 +36,40 @@ function mostrar()
 	promedioNegativos = 0;
 	//declarar contadores y variables 
 
-	while(respuesta === "si")
+	while(respuesta === "si") // o respuesta != "no"
 	{
 		numeroIngresado = prompt("Ingrese un número");
 		numeroIngresado = parseInt(numeroIngresado);
 		respuesta = prompt("Ingrese 'si' para continuar ingresando numeros")
-
-			if (numeroIngresado > 0)
-			{
-				sumaPositivos = sumaPositivos + numeroIngresado;
-				cantPositivos = cantPositivos + 1;
-				promedioPositivos = sumaPositivos / cantPositivos;
-			}
-			else
-			{
-				if (numeroIngresado < 0)
-				{
-					sumaNegativos = sumaNegativos + numeroIngresado;
-					cantNegativos = cantNegativos + 1;
-					promedioNegativos = sumaNegativos / cantNegativos; 
-				}
-				else
-				{
-					cantCeros = cantCeros + 1;
-				}
-			}
-
-		diferenciaPositivosNegativos = sumaPositivos + sumaNegativos;
-
-			if (numeroIngresado % 2 == 0)
-			{
-				cantPares = cantPares + 1;
-			}
 	}
+	
+	if (numeroIngresado > 0)
+	{
+		sumaPositivos = sumaPositivos + numeroIngresado;
+		cantPositivos = cantPositivos + 1;
+		promedioPositivos = sumaPositivos / cantPositivos;
+	}
+	else
+	{
+		if (numeroIngresado < 0)
+		{
+			sumaNegativos = sumaNegativos + numeroIngresado;
+			cantNegativos = cantNegativos + 1;
+			promedioNegativos = sumaNegativos / cantNegativos; 
+		}
+		else
+		{
+			cantCeros = cantCeros + 1;
+		}
+	}
+
+	diferenciaPositivosNegativos = sumaPositivos + sumaNegativos;
+
+	if (numeroIngresado % 2 == 0)
+	{
+		cantPares = cantPares + 1;
+	}
+
 
 	document.write("Suma de positivos: " + sumaPositivos + "<br>"); //preguntar como hacer punto aparte
 	document.write("Suma de negativos: " + sumaNegativos + "<br>");

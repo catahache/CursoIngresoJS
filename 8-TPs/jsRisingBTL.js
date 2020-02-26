@@ -28,7 +28,7 @@ function ComenzarIngreso ()
 	 }
 
 	 //SEXO
-	 while (sexo != "M" && sexo != "F")
+	 while (!isNaN(sexo) || sexo != "M" && sexo != "F")
 	 {
 	 	sexo = prompt ("Ingrese sexo: M o F")
 	 }
@@ -53,13 +53,10 @@ function ComenzarIngreso ()
 	 }
 
 	//NACIONALIDAD: preguntar por que no puedo poner el if adentro
-	while (nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
+	while (!isNaN(nacionalidad) || nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
 	{
 		nacionalidad = prompt ("Ingrese nacionalidad: “A” para argentinos, “E” para extranjeros, “N” para nacionalizados" )
 	}
-
-
-
 
 
 	//LOGICA
@@ -68,7 +65,7 @@ function ComenzarIngreso ()
 	{
 		estadoCivil = "solterx"
 	}
-	 else
+	 elseS
 	{
 		if (estadoCivil == 2)
 		{

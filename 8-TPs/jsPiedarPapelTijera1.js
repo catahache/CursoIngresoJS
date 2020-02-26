@@ -11,12 +11,21 @@ function comenzar()
 	var numeroRandom;
 
 	numeroRandom = Math.floor(Math.random()*10) + 1;
+	console.log(numeroRandom);
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	var piedra;
+	var jugador;
+
+	piedra = 1;
+
+	if (numeroRandom == piedra)
+	{
+		if (jugador == )
+	}
 
 }//FIN DE LA FUNCIÓN
 function papel()
