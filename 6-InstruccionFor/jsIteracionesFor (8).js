@@ -2,24 +2,23 @@ function mostrar()
 {
 	var numeroIngresado;
 	var i;
-	var contador;
+	var bandera;
 
-	contador = 0;
 	numeroIngresado = prompt("Ingrese un numero");
 	numeroIngresado = parseInt(numeroIngresado);
-
+	bandera = 0;
 
 
 	for(i=2; i<numeroIngresado;i++)//i es 2 porque es el divisor mas bajo
 	{
 		if(numeroIngresado%i==0)
 		{
-			contador = 1;
-			break; //cuando encuentro un divisor no sigue dividiendo
+			bandera = 1;
+			break; //cuando encuentro un divisor no sigue dividiendo. El num NO es primo.
 		}
 	}
 
-	if (contador == 0)
+	if (bandera == 0)
 	{
 		alert("El numero "+numeroIngresado+" es primo");
 	}
