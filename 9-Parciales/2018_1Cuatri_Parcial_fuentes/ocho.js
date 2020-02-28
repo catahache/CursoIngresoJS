@@ -1,4 +1,6 @@
-function mostrar()
+function NumerosPares()
 {
-
+	var letraIngresada;
+	var numeroIngresado;
+	
 }

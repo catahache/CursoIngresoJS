@@ -6,7 +6,7 @@ function mostrar()
 
 	numeroIngresado = prompt("Ingrese un numero");
 	numeroIngresado = parseInt(numeroIngresado);
-	bandera = 0;
+	bandera = 0;//lo que no entre en el for o el if sera primo(por eso 1 y 2 salen como primos)
 
 
 	for(i=2; i<numeroIngresado;i++)//i es 2 porque es el divisor mas bajo
