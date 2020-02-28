@@ -20,7 +20,7 @@ function NumerosPares ()
 	{
 		if(numeroPositivo % 2 == 0)
 		{
-			console.log(numeroPositivo + " es par");
+			document.write(numeroPositivo + " es par");
 			cantidadPares++;
 		}
 		
@@ -42,11 +42,11 @@ function NumerosImpares ()
 	{
 		if(numeroPositivo % 2 == 1)
 		{
-			console.log(numeroPositivo + " es impar");
+			document.write(numeroPositivo + " es impar");
 			cantidadImpares++;
 		}
 	}
-	console.log("La cantidad de impares es: " + cantidadImpares);
+	document.write("La cantidad de impares es: " + cantidadImpares);
 
 }
 
@@ -66,12 +66,12 @@ function NumerosDivisibles()
 		{
 			if(i % numeroPositivo == 0) //si el resto de la division entre i y numeroP da 0
 			{
-				console.log(numeroPositivo + "es divisor de " + i);				
+				document.write(numeroPositivo + "es divisor de " + i);				
 				cantidadDivisibles++;
 			}
 		}	
 	}
-	console.log(numeroPositivo + " es divisor de " + cantidadDivisibles + " numeros del 1 al 100");
+	document.write(numeroPositivo + " es divisor de " + cantidadDivisibles + " numeros del 1 al 100");
 }
 
 function VerificarPrimo ()
@@ -89,14 +89,14 @@ function VerificarPrimo ()
 		if(numeroPositivo % i == 0)
 		{
 			bandera = 1;
-			console.log("El numero " + numeroPositivo + " NO es primo.");
+			document.write("El numero " + numeroPositivo + " NO es primo.");
 			break;
 		}
 	}
 
 	if (bandera == 0)//si no es afectada por el for o el if.
 	{
-		console.log("El numero " + numeroPositivo + " es primo.");
+		document.write("El numero " + numeroPositivo + " es primo.");
 	}
 }
 
