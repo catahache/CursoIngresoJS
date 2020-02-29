@@ -25,7 +25,7 @@ function NumerosPares ()
 		}
 		
 	}
-	console.log("La cantidad de pares es: " + cantidadPares);
+	document.write("La cantidad de pares es: " + cantidadPares);
 
 }
 
@@ -105,8 +105,10 @@ function NumerosPrimos () //revisar
 	var numeroPositivo;
 	var divisor;
 	var bandera;
+	var contadorPrimos;
 
 	bandera = 0;
+	contadorPrimos = 0;
 
 	numeroPositivo = document.getElementById('numero').value;
 	numeroPositivo = parseInt(numeroPositivo);
@@ -123,14 +125,18 @@ function NumerosPrimos () //revisar
 			}
 			else
 			{
-				if(bandera == 0)
-				{
-					console.log("El numero " + numeroPositivo + " SI es primo");
-					break;
-				}
+				bandera = 0; //hay que volver a ponerlo porque sino la bandera queda en 1
 			}
 		}
+
+		if(bandera == 0)
+		{
+			console.log("El numero " + numeroPositivo + " SI es primo");
+			contadorPrimos++;
+		}
 	}
+	
+	document.write("La cantidad de numeros primos es: " + contadorPrimos);
 }
 
 
