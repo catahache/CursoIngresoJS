@@ -89,9 +89,6 @@ function mostrar()
 		promedioPeso = sumaPesos / contadorPeso;
 
 
-
-
-
 		respuesta = prompt("Para seguir ingresando escriba 'si' ");
 	}
 

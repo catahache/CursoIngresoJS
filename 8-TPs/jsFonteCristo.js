@@ -107,23 +107,28 @@ function NumerosPrimos () //revisar
 	var i;
 	var bandera;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
 	bandera = 0;
 
-	for(divisor=2; divisor<numeroPositivo; divisor++)
+	numeroPositivo = document.getElementById('numero').value;
+	numeroPositivo = parseInt(numeroPositivo);
+
+	for(numeroPositivo = numeroPositivo; numeroPositivo> -1; numeroPositivo--)
 	{
-		for(i=numeroPositivo; i > -1 ; i--)
+		for(divisor = 2; divisor < numeroPositivo; divisor++)
 		{
-			if(i % divisor == 0)
+			if(numeroPositivo % divisor == 0)
 			{
-				bandera = 1;
-				console.log("El numero " + i + " NO es primo");
+				bandera = 1; 
+				console.log("El numero " + numeroPositivo + " NO es primo");
 				break;
 			}
-			if(bandera == 0)
+			else
 			{
-				console.log("El numero " + i + " es primo.")
+				if(bandera == 0)
+				{
+					console.log("El numero " + numeroPositivo + " SI es primo");
+					break;
+				}
 			}
 		}
 	}
