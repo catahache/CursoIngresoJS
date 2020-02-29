@@ -108,13 +108,13 @@ function mostrar() //RESOLVER
 
 	promedio = sumaPositivos / cantidadPositivos;
 
-	console.log("Cantidad numeros pares: " + cantidadPares);
-	console.log("Cantidad numeros impares: " + cantidadImpares);
-	console.log("Cantidad de ceros: " + cantidadCeros);
-	console.log("Promedio numeros positivos: " + promedio);
-	console.log("Suma negativos: " + sumaNegativos);
-	console.log("Letra máxima y número máximo " + maximo + letraMaxima);
-	console.log("Letra mínima y número mínimo "+ minimo + letraMinima);
+	document.write("Cantidad numeros pares: " + cantidadPares + "<br>");
+	document.write("Cantidad numeros impares: " + cantidadImpares + "<br>");
+	document.write("Cantidad de ceros: " + cantidadCeros + "<br>");
+	document.write("Promedio numeros positivos: " + promedio + "<br>");
+	document.write("Suma negativos: " + sumaNegativos + "<br>");
+	document.write("Letra máxima y número máximo " + maximo + letraMaxima + "<br>");
+	document.write("Letra mínima y número mínimo "+ minimo + letraMinima + "<br>");
 
 
 
