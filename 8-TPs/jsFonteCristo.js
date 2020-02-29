@@ -104,7 +104,6 @@ function NumerosPrimos () //revisar
 {
 	var numeroPositivo;
 	var divisor;
-	var i;
 	var bandera;
 
 	bandera = 0;
