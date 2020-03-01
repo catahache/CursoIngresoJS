@@ -9,134 +9,131 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function NumerosPares () 
 {
-	var numeroPositivo;
-	var cantidadPares;
+	var numero;
+	var contadorPares;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
-	cantidadPares = 0;
+	numero = document.getElementById('numero').value;
+	numero = parseInt(numero);
 
-	for(numeroPositivo = numeroPositivo; numeroPositivo > -1; numeroPositivo--)
+	for(numero = numero; numero > -1 ; numero --)
 	{
-		if(numeroPositivo % 2 == 0)
+		if(numero % 2 == 0 && numero != 0)
 		{
-			document.write(numeroPositivo + " es par");
-			cantidadPares++;
+			console.log("el numero "+numero+" es par");
+			contadorPares++;
 		}
-		
+		else
+		{
+			if(numero != 0)
+			console.log("el numero "+numero+" es impar");
+		}
 	}
-	document.write("La cantidad de pares es: " + cantidadPares);
 
 }
 
 function NumerosImpares ()
 {
-	var numeroPositivo;
-	var cantidadImpares;
+	var numero;
+	var contadorImpares;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
-	cantidadImpares = 0;
+	numero = document.getElementById('numero').value;
+	numero = parseInt(numero);
 
-	for(numeroPositivo = numeroPositivo; numeroPositivo > -1; numeroPositivo--)
+	for(numero = numero; numero > -1 ; numero --)
 	{
-		if(numeroPositivo % 2 == 1)
+		if(numero % 2 == 0 && numero != 0)
 		{
-			document.write(numeroPositivo + " es impar");
-			cantidadImpares++;
+			console.log("el numero "+numero+" es par");
+		}
+		else
+		{
+			if(numero != 0)
+			console.log("el numero "+numero+" es impar");
+			contadorImpares++;
 		}
 	}
-	document.write("La cantidad de impares es: " + cantidadImpares);
 
 }
 
 function NumerosDivisibles()
 {
-	var numeroPositivo; //dividendo
-	var i; //divisor
-	var cantidadDivisibles;
+	var numero;
+	var dividendo;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
-	cantidadDivisibles = 0;
+	numero = document.getElementById('numero').value;
+	numero = parseInt(numero);
 
-	for(i=1;i<101;i++)
+	for(dividendo = 1; dividendo < 101; dividendo ++)
 	{
-		if(numeroPositivo> -1)
+		if(dividendo % numero == 0)
 		{
-			if(i % numeroPositivo == 0) //si el resto de la division entre i y numeroP da 0
-			{
-				document.write(numeroPositivo + "es divisor de " + i);				
-				cantidadDivisibles++;
-			}
-		}	
+			console.log("El numero "+dividendo+ " se divide por " + numero);
+		}
 	}
-	document.write(numeroPositivo + " es divisor de " + cantidadDivisibles + " numeros del 1 al 100");
+	
 }
 
 function VerificarPrimo ()
 {
-	var numeroPositivo;
-	var i;
+	var numero;
+	var divisor;
 	var bandera;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
-	bandera = 0; //lo que no entre en el for o el if sera primo(por eso 1 y 2 salen como primos)
+	numero = document.getElementById('numero').value;
+	numero = parseInt(numero);
 
-	for(i=2; i < numeroPositivo; i++)//2 es el divisor mas bajo. i tiene que ser menor al numeroP porque el anterior es 1 (primo)
+	bandera = 0;
+
+	for(divisor=2; divisor < numero; divisor ++)
 	{
-		if(numeroPositivo % i == 0)
+		if(numero % divisor == 0)
 		{
 			bandera = 1;
-			document.write("El numero " + numeroPositivo + " NO es primo.");
 			break;
+		}
+		else
+		{
+			bandera = 0;
 		}
 	}
 
-	if (bandera == 0)//si no es afectada por el for o el if.
+	if(bandera == 0)
 	{
-		document.write("El numero " + numeroPositivo + " es primo.");
+		console.log("El numero "+numero+ " es primo")
 	}
 }
 
 function NumerosPrimos () 
 {
-	var numeroPositivo;
+	var numero;
 	var divisor;
 	var bandera;
 	var contadorPrimos;
 
+	numero = document.getElementById('numero').value;
+	numero = parseInt(numero);
+
 	bandera = 0;
-	contadorPrimos = 0;
 
-	numeroPositivo = document.getElementById('numero').value;
-	numeroPositivo = parseInt(numeroPositivo);
-
-	for(numeroPositivo = numeroPositivo; numeroPositivo> -1; numeroPositivo--)
+	for(numero = numero; numero > -1; numero --)
 	{
-		for(divisor = 2; divisor < numeroPositivo; divisor++)
+		for(divisor = 2; divisor < numero; divisor++)
 		{
-			if(numeroPositivo % divisor == 0)
+			if(numero % divisor == 0)
 			{
-				bandera = 1; 
-				console.log("El numero " + numeroPositivo + " NO es primo");
+				bandera = 1;
 				break;
 			}
 			else
 			{
-				bandera = 0; //hay que volver a ponerlo porque sino la bandera queda en 1
+				bandera = 0;
 			}
 		}
-
 		if(bandera == 0)
 		{
-			console.log("El numero " + numeroPositivo + " SI es primo");
-			contadorPrimos++;
+			console.log("El numero "+numero+ " es primo")
 		}
 	}
-	
-	document.write("La cantidad de numeros primos es: " + contadorPrimos);
 }
 
 
