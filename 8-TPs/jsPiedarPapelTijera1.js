@@ -16,89 +16,68 @@ function comenzar()
 	eleccionMaquina = Math.floor(Math.random()*3) + 1;
 	console.log(eleccionMaquina);
 
-	if(eleccionMaquina == 1)
+	switch(eleccionMaquina)
 	{
-		piedra = eleccionMaquina;
+		case 1:
+			eleccionMaquina = piedra;
+			break;
+		case 2:
+			eleccionMaquina = papel;
+			break;
+		case 3:
+			eleccionMaquina = tijera;
+			break;
 	}
-	else
-	{
-		if(eleccionMaquina == 2)
-		{
-			papel = eleccionMaquina;
-		}
-		else
-		{
-			tijera = eleccionMaquina;
-		}
-	} 
-	
+		
 
 }//FIN DE LA FUNCIÓN
 
 function piedra()
 {
-	if(eleccionMaquina == tijera)
+	switch(eleccionMaquina)
 	{
-		resultado = alert("Ganaste!");
-	}
-	else
-	{
-		if(eleccionMaquina == papel)
-		{
-			resultado = alert("Perdiste");
-		}
-		else
-		{
-			if(eleccionMaquina == piedra) //no anda
-			{
-				resultado = alert("Empataste");
-			}
-		}
+		case piedra:
+			alert("Empataste");
+			break;
+		case papel:
+			alert("Perdiste");
+			break;
+		case tijera:
+			alert("Ganaste");
+			break;
 	}
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
 
-	if (eleccionMaquina == piedra)
+	switch(eleccionMaquina)
 	{
-		resultado = alert("Ganaste!");
-	}
-	else
-	{
-		if(jugador == tijera)
-		{
-			resultado = alert("Perdiste");
-		}
-		else
-		{
-			if(eleccionMaquina == papel) //no anda
-			{
-				resultado = alert("Empataste");
-			}
-		}
+		case piedra:
+			alert("Ganaste");
+			break;
+		case papel:
+			alert("Empataste");
+			break;
+		case tijera:
+			alert("Perdiste");
+			break;
 	}
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	if(eleccionMaquina == papel)
+	switch(eleccionMaquina)
 	{
-		resultado = alert("Ganaste!");
-	}
-	else
-	{
-		if(eleccionMaquina == piedra)
-		{
-			resultado = alert("Perdiste");
-		}
-		else
-		{
-			if(eleccionMaquina == tijera) //no anda
-			{
-				resultado = alert("Empataste");
-			}
-		}
+		case piedra:
+			alert("Perdiste");
+			break;
+		case papel:
+			alert("Ganaste");
+			break;
+		case tijera:
+			alert("Empataste");
+			break;
 	}
 
 
