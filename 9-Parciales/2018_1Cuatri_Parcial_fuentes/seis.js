@@ -36,13 +36,19 @@ function mostrar()
 		case 4:
 		case 5:
 			console.log("es de noche ");
+
+			if (hora > 19 && hora < 24)
+			{
+				console.log ("a dormir")
+			}
+			
 			break;
 		default:
 			console.log("La hora no es valida");
 			break;
-	}
-	if (hora > 19 && hora < 24)
-	{
-		console.log ("a dormir")
-	}
+
+
+	}	
 }
+	
+	
