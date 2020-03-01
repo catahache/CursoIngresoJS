@@ -100,7 +100,7 @@ function VerificarPrimo ()
 	}
 }
 
-function NumerosPrimos () //revisar
+function NumerosPrimos () 
 {
 	var numeroPositivo;
 	var divisor;
