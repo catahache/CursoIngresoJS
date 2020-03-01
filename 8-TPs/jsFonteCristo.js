@@ -17,7 +17,7 @@ function NumerosPares ()
 
 	for(numero = numero; numero > -1 ; numero --)
 	{
-		if(numero % 2 == 0 && numero != 0)
+		if(numero % 2 == 0)
 		{
 			console.log("el numero "+numero+" es par");
 			contadorPares++;
@@ -41,7 +41,7 @@ function NumerosImpares ()
 
 	for(numero = numero; numero > -1 ; numero --)
 	{
-		if(numero % 2 == 0 && numero != 0)
+		if(numero % 2 == 0)
 		{
 			console.log("el numero "+numero+" es par");
 		}
