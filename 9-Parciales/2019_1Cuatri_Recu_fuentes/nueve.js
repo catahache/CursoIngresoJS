@@ -111,26 +111,6 @@ function mostrar()
 	promedioNotasVarones = acumuladorNotasVarones / contadorNotasVarones;
 	promedioNotasMujeres = acumuladorNotasMujeres / contadorNotasMujeres;
 
-	if(promedioNotasMenores == NaN)
-	{
-		promedioNotasMenores = 0;
-	}
-	if(promedioNotasAdolescentes == NaN)
-	{
-		promedioNotasAdolescentes = 0;
-	}
-	if(promedioNotasMayores == NaN)
-	{
-		promedioNotasMayores = 0;
-	}
-	if(promedioNotasVarones == NaN)
-	{
-		promedioNotasVarones = 0;
-	}
-	if(promedioNotasMujeres == NaN)
-	{
-		promedioNotasMujeres = 0;
-	}
 
 	document.write("<br> Cantidad de varones aprobados: " + cantidadVaronesAprobados);
 	document.write("<br> Promedio de notas de menores de edad: " + promedioNotasMenores);
