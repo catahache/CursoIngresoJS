@@ -46,6 +46,7 @@ function mostrar()
 		for(edad = 0; isNaN(edad) || edad < 18;)
 		{
 			edad = prompt("Ingrese edad mayor a 18");
+			edad = parseInt(edad);
 		}
 		for(sexo = 0; !isNaN(sexo) || sexo != "m" && sexo != "f";)
 		{
