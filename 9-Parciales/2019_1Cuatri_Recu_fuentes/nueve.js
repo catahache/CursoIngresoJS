@@ -11,117 +11,131 @@ function mostrar()
 	var nombre;
 	var edad;
 	var sexo;
-	var notaFinal;
+	var nota;
 	var respuesta;
 	var cantidadVaronesAprobados;
+	var contadorNotasMenores;
 	var acumuladorNotasMenores;
-	var cantidadMenores;
-	var promedioNotaMenores;
-	var cantidadAdolescentes;
+	var contadorNotasAdolescentes;
 	var acumuladorNotasAdolescentes;
-	var promedioNotasAdolescentes;
-	var cantidadMayores;
+	var contadorNotasMayores;
 	var acumuladorNotasMayores;
-	var promedioNotasMayores;
-	var acumuladorNotasMujeres;
-	var cantidadMujeres;
-	var promedioNotasMujeres;
+	var contadorNotasVarones;
 	var acumuladorNotasVarones;
-	var cantidadVarones;
+	var contadorNotasMujeres;
+	var acumuladorNotasMujeres;
+	var promedioNotasMenores;
+	var promedioNotasAdolescentes;
+	var promedioNotasMayores;
 	var promedioNotasVarones;
+	var promedioNotasMujeres;
 
 	cantidadVaronesAprobados = 0;
 	acumuladorNotasMenores = 0;
-	cantidadMenores = 0;
-	cantidadAdolescentes = 0;
+	contadorNotasMenores = 0;
+	contadorNotasAdolescentes = 0;
 	acumuladorNotasAdolescentes = 0;
-	cantidadMayores = 0;
+	contadorNotasMayores = 0;
 	acumuladorNotasMayores = 0;
-	acumuladorNotasMujeres =0;
-	cantidadMujeres = 0;
+	contadorNotasVarones = 0;
 	acumuladorNotasVarones = 0;
-	cantidadVarones = 0;
+	contadorNotasMujeres = 0;
+	acumuladorNotasMujeres = 0;
 
-	for(respuesta = "si"; respuesta === "si"; )
+	for(respuesta = "si" ; respuesta === "si" ;)
 	{
+
 		for(nombre = 0; !isNaN(nombre); )
 		{
 			nombre = prompt("Ingrese nombre");
-
 		}
+
 		for(edad = 0; isNaN(edad) || edad<10 || edad>99; )
 		{
-			edad = prompt("Ingrese edad de 10 a 99");
-			edad = parseInt(edad);
-		}
-		for(sexo = 0; !isNaN(sexo) || sexo != "m" && sexo != "f"; )
-		{
-			sexo = prompt("Ingrese sexo f o m");
-		}
-		for(notaFinal = 0; isNaN(notaFinal) || notaFinal<1 || notaFinal>10; )
-		{
-			notaFinal = prompt("Ingrese nota final");
-			notaFinal = parseInt(notaFinal)
+			edad = prompt("Ingrese edad de 10 a 99")
 		}
 
-		if(notaFinal>5 && sexo == "m")//se aprueba con 6
+		for(sexo = 0; !isNaN(sexo) || sexo != "f" && sexo != "m"; )
+		{
+			sexo = prompt ("Ingrese sexo f o m");
+		}
+
+		for(nota = 0; isNaN(nota) || nota<1 || nota>10; )
+		{
+			nota = prompt("Ingrese nota");
+			nota = parseInt(nota);
+		}
+
+		respuesta = prompt("Escriba 'si' para seguir ingresando");
+
+
+		if(nota > 5 && sexo == "m")
 		{
 			cantidadVaronesAprobados++;
 		}
-
-		if(edad>17)
+		
+		if(edad > 17)
 		{
-			cantidadMayores++;
-			acumuladorNotasMayores = acumuladorNotasMayores + notaFinal;
-			
+			contadorNotasMayores++;
+			acumuladorNotasMayores = acumuladorNotasMayores + nota;
 		}
 		else
 		{
-			if(edad<18)
+			if(edad < 18)
 			{
-				cantidadMenores++;
-				acumuladorNotasMenores = acumuladorNotasMenores + notaFinal;
+				contadorNotasMenores++;
+				acumuladorNotasMenores = acumuladorNotasMenores +nota;
 			}
-			if(edad>13 && edad<18)
+			if(edad < 18 && edad > 12)
 			{
-				cantidadAdolescentes++;
-				acumuladorNotasAdolescentes = acumuladorNotasAdolescentes + notaFinal;
+				contadorNotasAdolescentes++;
+				acumuladorNotasAdolescentes = acumuladorNotasAdolescentes + nota;
 			}
 		}
 
-		if(sexo == "f")
+		if(sexo == "m")
 		{
-			cantidadMujeres++;
-			acumuladorNotasMujeres = acumuladorNotasMujeres + notaFinal;
+			contadorNotasVarones++;
+			acumuladorNotasVarones = acumuladorNotasVarones + nota;
 		}
 		else
 		{
-			cantidadVarones++;
-			acumuladorNotasVarones = acumuladorNotasVarones + notaFinal;
+			contadorNotasMujeres++;
+			acumuladorNotasMujeres = acumuladorNotasMujeres + nota;
 		}
-
-		respuesta = prompt("Ingrese si para seguir ingresando datos");
 	}
 
-	promedioNotaMenores = acumuladorNotasMenores / cantidadMenores;
-	promedioNotasAdolescentes = acumuladorNotasAdolescentes / cantidadAdolescentes;
-	promedioNotasMayores = acumuladorNotasMayores / cantidadMayores;
-	promedioNotasMujeres = acumuladorNotasMujeres / cantidadMujeres;
-	promedioNotasVarones = acumuladorNotasVarones / cantidadVarones;
+	promedioNotasMenores = acumuladorNotasMenores / contadorNotasMenores;
+	promedioNotasAdolescentes = acumuladorNotasAdolescentes / contadorNotasAdolescentes;
+	promedioNotasMayores = acumuladorNotasMayores / contadorNotasMayores;
+	promedioNotasVarones = acumuladorNotasVarones / contadorNotasVarones;
+	promedioNotasMujeres = acumuladorNotasMujeres / contadorNotasMujeres;
 
-	console.log("<br> cantidad de varones aprobados: " + cantidadVaronesAprobados);
-	console.log("<br> promedio de notas de menores de edad: "+promedioNotaMenores);
-	console.log("<br> promedio de notas de adolescentes: " + promedioNotasAdolescentes);
-	console.log("<br> promedio notas de mayores de edad: " + promedioNotasMayores);
-	console.log("<br> promedio notas de mujeres: " + promedioNotasMujeres);
-	console.log("<br> promedio notas de varones: " + promedioNotasVarones);
+	if(promedioNotasMenores == NaN)
+	{
+		promedioNotasMenores = 0;
+	}
+	if(promedioNotasAdolescentes == NaN)
+	{
+		promedioNotasAdolescentes = 0;
+	}
+	if(promedioNotasMayores == NaN)
+	{
+		promedioNotasMayores = 0;
+	}
+	if(promedioNotasVarones == NaN)
+	{
+		promedioNotasVarones = 0;
+	}
+	if(promedioNotasMujeres == NaN)
+	{
+		promedioNotasMujeres = 0;
+	}
 
-	document.write("<br> cantidad de varones aprobados: " + cantidadVaronesAprobados);
-	document.write("<br> promedio de notas de menores de edad: "+promedioNotaMenores);
-	document.write("<br> promedio de notas de adolescentes: " + promedioNotasAdolescentes);
-	document.write("<br> promedio notas de mayores de edad: " + promedioNotasMayores);
-	document.write("<br> promedio notas de mujeres: " + promedioNotasMujeres);
-	document.write("<br> promedio notas de varones: " + promedioNotasVarones);
-
-	
+	document.write("<br> Cantidad de varones aprobados: " + cantidadVaronesAprobados);
+	document.write("<br> Promedio de notas de menores de edad: " + promedioNotasMenores);
+	document.write("<br> Promedio de notas de adolescentes: " + promedioNotasAdolescentes);
+	document.write("<br> Promedio de notas de mayores de edad: " + promedioNotasMayores);
+	document.write("<br> Promedio de nota de varones: " + promedioNotasVarones);
+	document.write("<br> Promedio de nota de mujeres: " + promedioNotasMujeres);
 }

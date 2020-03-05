@@ -24,7 +24,6 @@ function NumerosPares ()
 		}
 		else
 		{
-			if(numero != 0)
 			console.log("el numero "+numero+" es impar");
 		}
 	}
@@ -47,7 +46,6 @@ function NumerosImpares ()
 		}
 		else
 		{
-			if(numero != 0)
 			console.log("el numero "+numero+" es impar");
 			contadorImpares++;
 		}
